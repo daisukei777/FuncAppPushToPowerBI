@@ -1,0 +1,12 @@
+﻿{
+  "disabled": false,
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "myEventHubMessage",
+      "direction": "in",
+      "path": "dskiothub2",
+      "connection": "Endpoint=sb://iothub-ns-dskiothub2-117353-b56d670d60.servicebus.windows.net/;SharedAccessKeyName=iothubowner;SharedAccessKey=nP8BsSM1Svr5bImHQH21/hesizYRpSOtOhp878Kb5ck="
+    }
+  ]
+}
