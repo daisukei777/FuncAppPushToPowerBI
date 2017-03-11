@@ -33,7 +33,7 @@ public static void Run(string myEventHubMessage, TraceWriter log)
 
         var messageString = Newtonsoft.Json.JsonConvert.SerializeObject(output);
         string postData = "[" + messageString + "]";
-        SendData(postData, realTimePushURL);
+        SendDataAsync(postData, realTimePushURL);
 
         log.Info($" processed a post message: {postData}");
 
@@ -50,7 +50,7 @@ public static void Run(string myEventHubMessage, TraceWriter log)
 /// </summary>
 /// <param name="json"></param>
 /// <param name="apiurl"></param>
-static async void SendData(string json, string apiurl)
+static async void SendDataAsync(string json, string apiurl)
 {
     // sending request to Power BI streaming API
     WebRequest request = WebRequest.Create(apiurl);
